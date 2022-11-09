@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com">
+
+  <title>Números Romanos.</title>
+
+  <link rel="stylesheet" href="assets/vendor/animate/animate.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="assets/css/maicons.css">
+  <link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="icons/icofont/icofont.min.css">
+  <link rel="shortcut icon" href="img/favicon.png" style="background-color: bisque;">
+</head>
+
+<body class="text-code">
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+      <div class="container">
+        <a href="index.html" class="img-log">
+          <img src="img/logoWeb.png" alt="">
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="page-juegos.html" class="nav-link">Juegos</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#about" class="nav-link">Nuestros Equipos</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#contact" class="nav-link">Contactos</a>
+            </li>
+          </ul>
+          <div class="ml-auto">
+            <a href="#" class="btn btn-outline rounded-pill ruta" target="_blank"><i class="icofont-brand-whatsapp"
+                style="font-size: 20px;"></i>&nbsp;Compartir</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mt-4 mb-5" id="Kahoot">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Kahoot!. - Números Romanos</h3>
+      </div>
+      <nav aria-label="Breadcrumb">
+        <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="page.juegos.html">Juegos</a></li>
+          <li class="breadcrumb-item">Kahoot</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="page-banner mx-auto" id="scrollCompleta" style="position: relative; background-color: #bafff0;">
+      <div class="addOpaco">
+      </div>
+
+      <div class="menu-options" style="z-index: 1000;">
+        <div class="row justify-content-center align-items-center" style="z-index: 1000;">
+          <div class="col-md-7 text-left">
+            <h5 class="text-code nameUser" style="margin-bottom: 0px;"></h5>
+          </div>
+          <div class="col-md-5 text-right">
+            <div class="btn-group">
+              <select class="form-control selectDifficulty" name="" placeholder="Dificultad" data-toggle="tooltip"
+                title="Dificultad" id="" style="width: 160px; border: 0px; background-color: #fff; color: #333;">
+                <option value="6">Fácil</option>
+                <option value="8">Mediana</option>
+                <option value="12">Dificil</option>
+              </select>
+              <h6 style="margin-bottom: 0px; display: none;" class="containerValorDifficulty mr-2"><span
+                  style="font-weight: 600; ">Dificultad:
+                </span><span class="valorDifficulty">Fácil</span></h6>
+            </div>
+
+            <div class="btn-group">
+              <input class="inputColor" style="cursor: pointer;" value="#bafff0" name="textColor" type="color"
+                data-color="text" list="listacoloresperfil" data-toggle="tooltip" title="Temas de color" />
+              <datalist class="optionColors" id="listacoloresperfil">
+                <option value="#f8ffba">
+                <option value="#ffbaba">
+                <option value="#ffedba">
+                <option value="#c5e3ff">
+                <option value="#baffd4">
+                <option value="#f3f3f3">
+                <option value="#baf1ff">
+                <option value="#baddff">
+                <option value="#bac7ff">
+                <option value="#d0baff">
+                <option value="#ffbafa">
+                <option value="#ffbae0">
+                <option value="#ffbaba">
+                <option value="#e0e0e0">
+                <option value="#bafff0">
+              </datalist>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row ContentPlay justify-content-center align-items-center" style="margin-top: 180px;">
+        <div class="col-md-8 text-center">
+          <h2 class="mb-4">Juego: Kahoot!</h2>
+          <div class="mb-3 validation" style="display: flex; justify-content: center;">
+            <input type="text" class="form-control inputUser text-center input-lg" placeholder="Nombres" maxlength="19"
+              required>
+          </div>
+          <div class="controlForm validateName" id="iddColor">
+            <small class="mb-4">message error</small>
+          </div>
+          <button type="button" class="btn btn-primary iniciarKahoot">Iniciar</button>
+        </div>
+      </div>
+
+      <div class="card-body-juego respuestaCorrecta" style="display: none;">
+        <div class="row numberCajas justify-content-center align-items-center h-100" style="margin-top:60px">
+          <div class="col-md-12 text-right">
+            <P class="p1"><span class="text-primary b" id="counterAnswers">1</span> de <span
+                class="itemsRespuestas"></span></P>
+          </div>
+          <div class="col-md-12 text-center mb-4">
+            <i class="icofont-check-circled iconMayorCorrecta"></i>
+            <h1>Respuesta Correcta</h4>
+              <h4>Tu Respuesta es: <span class="textRespuesta"></span></h4>
+          </div>
+          <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-secondary btn-siguiente"> Siguiente </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body-juego respuestaIncorrecta" style="display: none;">
+        <div class="row numberCajas justify-content-center align-items-center h-100" style="margin-top:60px">
+          <div class="col-md-12 text-right">
+            <P class="p1"><span class="text-primary b" id="counterAnswers">1</span> de <span
+                class="itemsRespuestas"></span></P>
+          </div>
+          <div class="col-md-12 text-center mb-4">
+            <i class="icofont-close-circled iconMayorIncorrecta"></i>
+            <h1>Respuesta Incorrecta</h4>
+              <h4>Tu Respuesta es: <span class="textRespuesta"></span></h4>
+              <h4>La respuesta correcta es: <span class="textRespuesta" id="correctAnswer"></span></h4>
+          </div>
+          <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-secondary btn-siguiente"> Siguiente </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-footer" style="z-index: 90;">
+        <div class="text-right">
+          <div class="btn-group dropup">
+            <button type="button" class="btn-menu iconsFooterGame btnOptions" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style="padding: 0px 10px;">
+              <i class="icofont-gear-alt"></i></button>
+            <div class="dropdown-menu dropdown-menu-right menuPrueva">
+              <!-- Dropdown menu links -->
+              <a class="dropdown-item reiniciarJuego" href="#" style="display: none;">Volver a empezar</a>
+              <a class="dropdown-item" href="page.juegos.html">Más juegos</a>
+              <button type="button" class="dropdown-item option-dropdown-item  btnReanudar">Reanudar</button>
+              <!--  <a class="dropdown-item" href="#">Something else here</a> -->
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="index.html">Ir al inicio</a>
+            </div>
+
+            <div class="sonidoin" style="padding: 0px 10px;">
+              <button type="button" class="btn-menu iconsFooterGame noSound">
+                <i class="icofont-volume-down"></i></button>
+            </div>
+
+            <div class="sonidooff" style="padding: 0px 10px;display: none;">
+              <button type="button" class="btn-menu iconsFooterGame yesSound">
+                <i class="icofont-volume-off"></i></button>
+            </div>
+
+            <div class="completa" style="padding: 0px 10px;">
+              <button type="button" class="btn-menu iconsFooterGame completePantalla">
+                <i class="icofont-expand"></i></button>
+            </div>
+
+            <div class="contraer" style="padding: 0px 10px; display: none;">
+              <button type="button" class="btn-menu iconsFooterGame contraerPantalla">
+                <i class="icofont-expand"></i></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container mb-5">
+    <div class="card-body">
+      <div class="mb-3">
+        <h3>Tabla de Clasificación</h3>
+      </div>
+
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre del Participante</th>
+            <th scope="col">Dificultad</th>
+            <th scope="col">Puntuación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Se carga la data dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <main>
+    <div class="page-section">
+      <div class="container">
+        <div class="card-body">
+          <div class="mb-0">
+            <h3>Más Juegos</h3>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-lg-4 py-3">
+              <a href="juego-abre-caja.html" style="cursor: pointer; text-decoration: none;">
+                <div class="card-blog">
+                  <div class="header">
+                    <div class="img-card-game">
+                      <img src="img/juego-cajas.png" alt="">
+                    </div>
+
+                  </div>
+                  <div class=" fluid-text">
+                    <div class="post-title">
+                      <div>Abre la Caja.</div>
+                    </div>
+                    <div class="post-excerpt">¡Abre la caja y obtendrás una sorpresa!</div>
+                    <div class="entry-footer mt-2">
+                      <span class="post-author">Fecha de Creación: </span>
+                      <span class="post-date">20 Jul 2022</span>
+                    </div>
+                  </div>
+                  <div style="position: relative;">
+                    <div class="footer">
+                      <span class="btn btn-primary"> Jugar </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4 py-3">
+              <a href="juego-mayor-menor.html" style="cursor: pointer; text-decoration: none;">
+                <div class="card-blog">
+                  <div class="header">
+                    <div class="img-card-game">
+                      <img src="img/juego-Mayor.png" alt="">
+                    </div>
+
+                  </div>
+                  <div class=" fluid-text">
+                    <div class="post-title">
+                      <div>Mayor y Menor que.</div>
+                    </div>
+                    <div class="post-excerpt">¿Cual es el mayor número de los dos?</div>
+                    <div class="entry-footer mt-2">
+                      <span class="post-author">Fecha de Creación: </span>
+                      <span class="post-date">20 Jul 2022</span>
+                    </div>
+                  </div>
+                  <div style="position: relative;">
+                    <div class="footer">
+                      <span class="btn btn-primary"> Jugar </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4 py-3">
+              <a href="juego-ruleta.html" style="cursor: pointer; text-decoration: none;">
+                <div class="card-blog">
+                  <div class="header">
+                    <div class="img-card-game">
+                      <img src="img/juego-ruleta.png" alt="">
+                    </div>
+
+                  </div>
+                  <div class=" fluid-text">
+                    <div class="post-title">
+                      <div>Ruleta Romana.</div>
+                    </div>
+                    <div class="post-excerpt">Gira y gira la ruleta con fuerza y un poco de suerte.</div>
+                    <div class="entry-footer mt-2">
+                      <span class="post-author">Fecha de Creación: </span>
+                      <span class="post-date">20 Jul 2022</span>
+                    </div>
+                  </div>
+                  <div style="position: relative;">
+                    <div class="footer">
+                      <span class="btn btn-primary"> Jugar </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="container mb-5">
+    <div class="card-body">
+      <div class="mb-3">
+        <h3>¿Cómo Jugar?</h3>
+      </div>
+      <div>
+        <p class="p11 text-muted"> Este juego consiste en responder las preguntas de forma correcta al seleccionar una
+          de las opciones de respuesta. Ganara la persona que obtenga la mayor cantidad de respuestas correctas a mayor
+          dificultad.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer" style="background-color: rgb(255, 231, 209);">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-6 py-3">
+          <h3>Números<span class="text-primary">Romanos.</span></h3>
+          <p><span class="b">Los números romanos</span> son un grupo de símbolos formado por letras mayúsculas que
+            idearon los antiguos romanos para representar valores y cantidades.</p>
+
+          <div>
+            <p style="color: #007bff;">maguilarcuadrado@gmail.com</p>
+            <p style="color: #007bff;">+57 320 215 87 42</p>
+          </div>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Enlaces rápidos</h5>
+          <ul class="footer-menu">
+            <li><a href="index.html">Inicios</a></li>
+            <li><a href="page-juegos.html">Juegos</a></li>
+            <li><a href="index.html#about">Nuestros Equipos</a></li>
+            <li><a href="index.html#contact">Contactos</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 py-3">
+          <h5>Suscríbete</h5>
+          <form action="#">
+            <input type="text" class="form-control" placeholder="Envíanos tu Email">
+          </form>
+
+          <div class="sosmed-button mt-4">
+            <a href="https://www.facebook.com/profile.php?id=100083688257696" target="_blank"><span
+                class="mai-logo-facebook-f"></span></a>
+            <a href="https://instagram.com/numerosromanos_6?igshid=YmMyMTA2M2Y=" target="_blank"><span
+                class="mai-logo-instagram"></span></a>
+          </div>
+          <div class="text-right img-logo">
+            <img src="img/logoWeb.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 text-center py-2">
+          <p id="copyright">&copy; 2022 <span class="text-primary">Números Romanos</span>. Todas los derechos
+            reservados.</p>
+        </div>
+      </div>
+    </div> <!-- .container -->
+  </footer> <!-- .page-footer -->
+
+
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/vendor/wow/wow.min.js"></script>
+
+  <script src="assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+
+  <script src="assets/vendor/animateNumber/jquery.animateNumber.min.js"></script>
+
+  <script src="assets/js/google-maps.js"></script>
+
+  <script src="assets/js/theme.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    if (iniciarKahoot) {
+
+      const questions = [
+        {
+          question: 'El símbolo V se puede escribir al menos:',
+          answers: [
+            { text: 'Una vez', correct: true },
+            { text: 'Dos veces', correct: false },
+            { text: 'Tres veces', correct: false },
+            { text: 'Ninguna de las anteriores', correct: false }
+          ]
+        },
+        {
+          question: 'El sistema de numeración romano es:',
+          answers: [
+            { text: 'Posicional', correct: true },
+            { text: 'Aditivo', correct: false },
+            { text: 'Posicional adictivo', correct: false },
+            { text: 'Ninguna de las anteriores', correct: false }
+          ]
+        },
+        {
+          question: 'Al colocar el símbolo I a la izquierda de V o X, éste le:',
+          answers: [
+            { text: 'Resta su valor', correct: true },
+            { text: 'Suma su valor', correct: false },
+            { text: 'Multiplica la expresión por mil', correct: false },
+            { text: 'Ninguna de las anteriores', correct: false }
+          ]
+        },
+        {
+          question: 'Entre los símbolos utilizados en el sistema romano está la D, y su equivalencia es:',
+          answers: [
+            { text: '5', correct: false },
+            { text: '100', correct: false },
+            { text: '500', correct: true },
+            { text: '10', correct: false }
+          ]
+        }, {
+          question: 'Si a la expresión XLI se le coloca un segmento arriba, el resultado sería:',
+          answers: [
+            { text: '41', correct: false },
+            { text: '410', correct: false },
+            { text: '4100', correct: false },
+            { text: '41000', correct: true }
+          ]
+        },
+        {
+          question: '¿Cuál de los siguientes números romanos es falso?',
+          answers: [
+            { text: 'DVD', correct: true },
+            { text: 'CD', correct: false },
+            { text: 'MMX', correct: false },
+            { text: 'XIX', correct: false }
+          ]
+        },
+        {
+          question: '¿Cuál de los siguientes números romanos es verdadero?',
+          answers: [
+            { text: 'XXXX', correct: false },
+            { text: 'XL', correct: true },
+            { text: 'VVL', correct: false },
+            { text: 'LLX', correct: false }
+          ]
+        },
+        {
+          question: 'El número 15 corresponde a:',
+          answers: [
+            { text: 'VVV', correct: false },
+            { text: 'XV', correct: true },
+            { text: 'VX', correct: false },
+            { text: 'VII', correct: false }
+          ]
+        },
+        {
+          question: 'El número romano MCCXLIV corresponde a:',
+          answers: [
+            { text: '1.244', correct: true },
+            { text: '1.264', correct: false },
+            { text: '1.266', correct: false },
+            { text: '1.589', correct: false }
+          ]
+        },
+        {
+          question: '¿Qué serie de números romanos es correcta?',
+          answers: [
+            { text: 'XI, XII, XIII, XIV, XV', correct: true },
+            { text: 'XI, XII, XIII, XIIII, XV', correct: false },
+            { text: 'XI, XII, XIIV, XIV, VX', correct: false },
+            { text: 'XI, XII, XIII, XVI, VX', correct: false },
+          ]
+        },
+        {
+          question: '¿Qué serie de números romanos es falsa?',
+          answers: [
+            { text: 'X, XV, XX, XXV, XXX, XXXV, XL, XLV, L', correct: false },
+            { text: 'X, XV, XX, XXV, XXX, XXXV, XXXX, XXXXV, L', correct: false },
+            { text: 'X, XX, XXX, XL, L, LX, LXX, LXXX, XC, C', correct: true },
+            { text: 'Ninguna de las anteriores', correct: false },
+          ]
+        },
+        {
+          question: 'El número 4 corresponde a:',
+          answers: [
+            { text: 'IIII', correct: false },
+            { text: 'IV', correct: true },
+            { text: 'VI', correct: false },
+            { text: 'IX', correct: false },
+          ]
+        }
+      ]
+
+      getDataLocalStorage('kahootGame');
+      iniciarKahoot.addEventListener("click", () => {
+
+        if (inputUser.value == "") {
+          errorSecondary(validateName, "Completa el campo");
+        } else {
+
+          reiniciarJuego.style.display = "block";
+          audioInicio.play();
+          successSecondary(validateName);
+
+          ContentPlay.style.display = ("none");
+          selectDifficulty.style.display = ("none");
+          containerValorDifficulty.style.display = "block";
+          nameUser.textContent = inputUser.value;
+
+          if (selectDifficulty.value == 6) {
+            valorDifficulty.textContent = "Fácil";
+          } else if (selectDifficulty.value == 8) {
+            valorDifficulty.textContent = "Mediana";
+          } else {
+            valorDifficulty.textContent = "Dificil";
+          }
+
+          // Agrega el código con la pregunta y sus opciones
+          addKahoot(ContentPlay);
+
+          let elementTotalQuestions = document.querySelector(".items");
+          let allQuestions = document.querySelectorAll(".evento-mayor");
+          let juegoKahoot = document.querySelector(".juego-kahoot");
+          let counterKahoot = juegoKahoot.querySelector('#counterAnswers');
+
+          elementTotalQuestions.textContent = selectDifficulty.value;
+          let contadorPreguntas = 0, score = 0;
+
+          // Reemplaza los valores con la primera pregunta y sus respuestas
+          addQuestions(contadorPreguntas);
+
+          // De esta manera se agrega un solo evento a los botones al momento de cargar la página
+          for (let i = 0; i < allQuestions.length; i++) {
+            allQuestions[i].addEventListener('click', selectAnswer);
+          }
+
+          // Se agrega el evento al botón siguiente para que muestre las nuevas opciones
+          let respuestaCorrecta = document.querySelector(".respuestaCorrecta");
+          let totalQuestionsCorrecto = respuestaCorrecta.querySelector(".itemsRespuestas");
+          let btnSiguienteCorrecta = respuestaCorrecta.querySelector(".btn-siguiente");
+
+          totalQuestionsCorrecto.textContent = selectDifficulty.value;
+          btnSiguienteCorrecta.addEventListener("click", () => {
+
+            contadorPreguntas++;
+            counterKahoot.textContent = contadorPreguntas + 1;
+            juegoKahoot.style.display = "block";
+            respuestaCorrecta.style.display = "none";
+            respuestaIncorrecta.style.display = "none";
+
+            correcto.load();
+            messageFinich(respuestaCorrecta, juegoKahoot);
+            addQuestions(contadorPreguntas);
+          });
+
+          let respuestaIncorrecta = document.querySelector(".respuestaIncorrecta");
+          let totalQuestionsIncorrecto = respuestaIncorrecta.querySelector(".itemsRespuestas");
+          let btnSiguienteIncorrecta = respuestaIncorrecta.querySelector(".btn-siguiente");
+
+          totalQuestionsIncorrecto.textContent = selectDifficulty.value;
+          btnSiguienteIncorrecta.addEventListener("click", () => {
+
+            contadorPreguntas++;
+            counterKahoot.textContent = contadorPreguntas + 1;
+            juegoKahoot.style.display = "block";
+            respuestaIncorrecta.style.display = "none";
+            respuestaCorrecta.style.display = "none";
+
+            incorrecto.load();
+            messageFinich(respuestaIncorrecta, juegoKahoot);
+            addQuestions(contadorPreguntas);
+          });
+
+          // answer es la respuesta que seleccionó
+          function selectAnswer(e) {
+
+            let isCorrect = e.currentTarget.dataset.correct;
+            let answer = e.currentTarget.dataset.answer;
+            let correctAnswer = e.currentTarget.dataset.correctAnswer;
+            juegoKahoot.style.display = "none";
+
+            if (isCorrect === "true") {
+              score++;
+              let counterCorrect = respuestaCorrecta.querySelector('#counterAnswers');
+              respuestaCorrecta.style.display = "block";
+              respuestaCorrecta.querySelector('.textRespuesta').textContent = answer;
+              counterCorrect.textContent = contadorPreguntas + 1;
+              correcto.play();
+            } else {
+              let counterIncorrect = respuestaIncorrecta.querySelector('#counterAnswers');
+              respuestaIncorrecta.style.display = "block";
+              respuestaIncorrecta.querySelector('.textRespuesta').textContent = answer;
+              counterIncorrect.textContent = contadorPreguntas + 1;
+              incorrecto.play();
+            }
+
+            // Muestra la respuesta correcta en la pantalla de error
+            let correctAnswerElement = document.querySelector('#correctAnswer');
+            if (correctAnswerElement) {
+              correctAnswerElement.textContent = correctAnswer;
+            }
+          }
+
+          function addQuestions(position) {
+            if (position > Number(selectDifficulty.value)) {
+              return;
+            }
+            const { question, answers } = questions[position];
+
+            let correctAnswer = answers.find((answer) => answer.correct === true);
+            let questionElement = juegoKahoot.querySelector('#question');
+            questionElement.textContent = question;
+
+            for (let i = 0; i < answers.length; i++) {
+              // Agrega las opciones
+              let answerOption = allQuestions[i].querySelector('.respuesta-kahoot > span');
+              answerOption.textContent = answers[i].text;
+
+              allQuestions[i].dataset.answer = answers[i].text;
+              allQuestions[i].dataset.correctAnswer = correctAnswer.text;
+
+              if (answers[i].correct) {
+                allQuestions[i].dataset.correct = true;
+              } else {
+                allQuestions[i].dataset.correct = false;
+              }
+            }
+          }
+
+
+          reiniciarJuego.addEventListener("click", () => {
+            location.reload();
+            if (respuestaCorrecta) respuestaCorrecta.style.display = "none";
+            else if (respuestaIncorrecta) respuestaIncorrecta.style.display = "none";
+          });
+
+          function messageFinich(respuestaCorrecta, juegoKahoot) {
+            if (contadorPreguntas == selectDifficulty.value) {
+              // Se guarda la información en localStorage y se lista
+              let objData = {
+                name: inputUser.value,
+                difficulty: valorDifficulty.textContent,
+                score
+              }
+              saveToLocalStorage('kahootGame', objData);
+              getDataLocalStorage('kahootGame');
+
+              // reemplazo de valores
+              let str = score === Number(selectDifficulty.value)
+                ? 'Felicitaciones'
+                : 'Sigue participando';
+
+              respuestaCorrecta.style.display = "none";
+              juegoKahoot.remove();
+              audioInicio.load();
+              addMessageFinich(ContentPlay, str, score);
+              addactualizarJuego();
+              reiniciarJuego.addEventListener("click", () => {
+                respuestaCorrecta.style.display = "none";
+              });
+
+            }
+          }
+          //eventos de reiniciar juegos
+          reiniciaJuegos(juegoKahoot, audioJazz);
+          reiniciarJuego.addEventListener("click", () => {
+            respuestaCorrecta.style.display = "none";
+          });
+        }
+
+      });
+    }
+  </script>
+
+</body>
+
+</html>
+
+<script>
+  let ruta = document.querySelector(".ruta");
+  ruta.href = `http://web.whatsapp.com/send?text=${window.location.href}`
+
+
+</script>
+
+
+<style>
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1030px;
+    }
+  }
+</style>
